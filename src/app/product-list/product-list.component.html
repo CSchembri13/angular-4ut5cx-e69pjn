@@ -12,13 +12,18 @@
     <tr *ngFor="let product of products">
       <td>{{ product.id }}</td>
       <td>{{ product.name }}</td>
-      <td>{{ product.price }}</td>
+      <td>{{ product.price | currency: 'EUR':true }}</td>
       <td>{{ product.description }}</td>
     </tr>
   </tbody>
 </table>
 
-<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+<form
+  #userForm="ngForm"
+  (ngSubmit)="onSubmit(userForm.value)"
+  style="background-color: lightblue;
+  padding:10px"
+>
   <div class="form-group">
     <label for="name">Name:</label>
     <input
