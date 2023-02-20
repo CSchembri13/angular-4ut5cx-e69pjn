@@ -27,7 +27,10 @@ export class ProductListComponent {
     console.warn(data);
     products.push(this.object_to_add);
   }
-  onDelete(id: any) {}
+  onDelete(id: any) {
+    alert(id);
+    delete products[id - 1];
+  }
 }
 
 /*
