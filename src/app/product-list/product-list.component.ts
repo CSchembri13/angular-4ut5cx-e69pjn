@@ -27,6 +27,7 @@ export class ProductListComponent {
     console.warn(data);
     products.push(this.object_to_add);
   }
+  onDelete(id: any) {}
 }
 
 /*
