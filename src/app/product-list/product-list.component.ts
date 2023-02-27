@@ -22,14 +22,15 @@ export class ProductListComponent {
       id: products.length + 1,
       name: data.name,
       price: data.price,
-      description: data.desc,
+      description: data.description,
     };
     console.warn(data);
     products.push(this.object_to_add);
   }
   onDelete(id: any) {
     alert(id);
-    delete products[id - 1];
+    let index = this.products.findIndex((d) => d.id === id);
+    this.products.splice(index, 1);
   }
 }
 
